@@ -1,0 +1,80 @@
+# Health & Fitness Hub - Setup Instructions
+
+This guide provides step-by-step instructions to set up and run the Health & Fitness Hub application on your local system.
+
+## Prerequisites
+
+1. Node.js (v16 or higher)
+2. PostgreSQL database
+3. Git
+
+## Installation
+
+1. Clone the repository:
+```
+git clone https://github.com/your-username/health-fitness-hub.git
+cd health-fitness-hub
+```
+
+2. Install dependencies:
+```
+npm install
+```
+
+3. Set up the database:
+   - Create a PostgreSQL database
+   - Set the DATABASE_URL environment variable to your database connection string:
+     ```
+     export DATABASE_URL=postgresql://username:password@localhost:5432/health_fitness_hub
+     ```
+
+4. Push the database schema:
+```
+node scripts/db-push.js
+```
+
+## Running the Application
+
+Start the server:
+```
+node server.js
+```
+
+The application will be available at http://localhost:5000
+
+## Project Structure
+
+- `/server.js` - Main entry point for the Express server
+- `/src/frontend/` - Frontend HTML, CSS, and JavaScript files
+- `/src/server/` - Server-side code including API routes and services
+- `/src/shared/` - Shared code between server and client (e.g., database schema)
+- `/scripts/` - Utility scripts for database management
+
+## Database Schema
+
+The application uses Drizzle ORM with the following tables:
+- users - User profiles
+- activities - User workout activities
+- goals - User fitness goals
+- notifications - User notifications
+- health_metrics - Daily health measurements
+
+## API Endpoints
+
+- `/api/health/dashboard` - Dashboard data including daily metrics
+- `/api/activities` - CRUD operations for workout activities
+- `/api/goals` - CRUD operations for fitness goals
+
+## Features
+
+- Dashboard with current health metrics
+- Weekly activity charts
+- Workout activity tracking
+- Goal setting and progress tracking
+- Analytics dashboard with historical data
+
+## Troubleshooting
+
+- If you encounter database connection issues, verify your DATABASE_URL environment variable.
+- For any missing dependencies, run `npm install` again.
+- Make sure PostgreSQL is running on your system.

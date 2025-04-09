@@ -1,0 +1,27 @@
+{
+    "name": "workspace",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+      "chart.js": "^4.4.8",
+      "cors": "^2.8.5",
+      "drizzle-kit": "^0.30.6",
+      "drizzle-orm": "^0.41.0",
+      "express": "^5.1.0",
+      "nodemon": "^3.1.9",
+      "pg": "^8.14.1",
+      "react": "^19.1.0",
+      "react-dom": "^19.1.0",
+      "ts-node": "^10.9.2",
+      "typescript": "^5.8.3",
+      "uuid": "^11.1.0"
+    }
+  }
+  
